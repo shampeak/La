@@ -40,7 +40,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Error Catched.</div>
+                <div class="title">Error Code 404</div>
             </div>
         </div>
     </body>

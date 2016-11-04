@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Be right back.</title>
+        <title>Laravel</title>
 
         
 
@@ -14,7 +14,6 @@
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                color: #B0BEC5;
                 display: table;
                 font-weight: 100;
                 font-family: 'Lato';
@@ -32,16 +31,32 @@
             }
 
             .title {
-                font-size: 72px;
-                margin-bottom: 40px;
+                font-size: 96px;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Error Catched.</div>
-            </div>
+
+
+
+                <h1>List</h1>
+                <?php foreach($doc as $key=>$value) : ?>
+                <li><?=$key?> : <a href="<?=$value?>"><?=$value?></a> </li>
+                <?php endforeach;?>
+
+                <h1>List</h1>
+                <li>cm : <a href="/cm">/cm</a> </li>
+                <li>welcome : <a href="/welcome">/welcome</a> </li>
+                <li>hello : <a href="/hello">/hello</a> </li>
+                <li>docdemo : <a href="/docdemo">/docdemo</a> </li>
+                <li>list : <a href="/list">/list</a> </li>
+                <li>errors : <a href="/errors">/errors</a> </li>
+                <li>404 : <a href="/404">/404</a> </li>
+
+
+            </h1>
         </div>
     </body>
 </html>

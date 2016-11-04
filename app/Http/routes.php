@@ -11,6 +11,24 @@
 |
 */
 
+Route::get('/', function () {
+
+    return view('list',[
+        'doc'=>[
+           
+        ]
+    ]);
+});
+
+
+
+
+Route::group(['namespace' => 'Cm'], function()
+{
+
+    Route::get('/cm', 'CmController@index');
+
+});
 
 
 
@@ -26,13 +44,11 @@ Route::group(['namespace' => 'Doc'], function()
         return view('doc/router', ['id' => $id]);
     });
 
-
     Route::get('/doc/hello', function () {
         return view('doc/hello', ['title' => 'Victoria']);
     });
 
     Route::get('/doc/welcome', 'UserController@welcome');
-
 
 });
 
@@ -140,14 +156,39 @@ Route::group(['namespace' => 'Doc'], function()
 
 
 
+
+
+
+
+
+
+
+Route::get('/list', function () {
+    return view('list',[
+        'doc'=>[
+        ]
+    ]);
+});
+
+Route::get('/errors', function () {
+    return view('errors/503');
+});
+
+Route::get('/404', function () {
+    //404自定义
+    //resources/views/errors/404.blade.php
+    abort(404, 'Unauthorized action.');
+});
+
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+Route::get('/hello', function () {
     return view('hello');
 });
 
 Route::get('/docdemo', function () {
     return view('docdemo');
 });
+
