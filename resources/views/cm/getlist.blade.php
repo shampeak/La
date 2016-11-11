@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="高效优雅的PHP微型框架">
     <meta name="author" content="Shampeak">
-    <title>GraceEasy 高效优雅的PHP微型框架</title>
+    <title>Demo</title>
     <link href="/assets/bootstrap-3.3.5/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/css/U.css" type="text/css" rel="stylesheet"/>
 </head>
@@ -51,8 +51,11 @@
                             <li>
                                 <a href="#s1">GraceEasy简介</a>
                             </li>
+
                         </ul>
                     </li>
+
+
                 </ul>
                 <!--  -->
                 <a class="back-to-top" href="#top">
@@ -70,37 +73,20 @@
             <div class="blog-header">
                 <ol class="breadcrumb">
                     <li><a href="/">首页</a></li>
-                    <li class="active">脚手架</li>
+                    <li class="active">简介</li>
                 </ol>
-                <h1>Cm</h1>
-                <p class="blog-description">脚手架.</p>
+                <h1>Demo</h1>
+                <p class="blog-description">Demo.</p>
             </div>
             <!-- /breadcrumb -->
 
             <!-- .blog-post -->
 
             <div class="blog-post" id="s1">
-                <h2>简介</h2>
-                <hr>
-                <p>　　辅助帮助开发的功能！
-                </p>
+                页面demo
             </div>
 
-            <li><a>数据读取</a></li>
-
-            <li><a>外部数据读取</a></li>
-
-            <li><a>数据库数据读取</a></li>
-            <li><a>地址栏信息读取</a></li>
-            <hr>
-            <li>index
-            <li>demo
-            <li>getlist
-            <li>sysman
-
             <!-- /.blog-post -->
-
-
 
             <hr>
 

@@ -41,7 +41,7 @@
 
 
 
-                <h1>List</h1>
+                <h1>List12</h1>
                 <?php foreach($doc as $key=>$value) : ?>
                 <li><?=$key?> : <a href="<?=$value?>"><?=$value?></a> </li>
                 <?php endforeach;?>

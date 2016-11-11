@@ -42,69 +42,68 @@
 <div class="container" id="cbody">
 
     <div class="row">
-        <div class="col-sm-3 blog-sidebar">
-            <div class=" hidden-print hidden-xs hidden-sm  sidebar-module-inset menuleftbar" role="complementary" style="padding-top: 50px;">
-                <!--ul class="nav bs-sidenav">
-                    <li>
-                        GraceEasy简介
-                        <ul>
-                            <li>
-                                <a href="#s1">GraceEasy简介</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <!--  -->
-                <a class="back-to-top" href="#top">
-                    返回顶部
-                </a>
-            </div>
 
-
-
-        </div><!-- /.blog-sidebar -->
-
-        <div class="col-sm-9 blog-main">
-
-            <!-- breadcrumb -->
+        <div class="col-sm-12">
             <div class="blog-header">
                 <ol class="breadcrumb">
                     <li><a href="/">首页</a></li>
                     <li class="active">脚手架</li>
                 </ol>
-                <h1>Cm</h1>
-                <p class="blog-description">脚手架.</p>
             </div>
-            <!-- /breadcrumb -->
-
-            <!-- .blog-post -->
-
-            <div class="blog-post" id="s1">
-                <h2>简介</h2>
-                <hr>
-                <p>　　辅助帮助开发的功能！
-                </p>
-            </div>
-
-            <li><a>数据读取</a></li>
-
-            <li><a>外部数据读取</a></li>
-
-            <li><a>数据库数据读取</a></li>
-            <li><a>地址栏信息读取</a></li>
-            <hr>
-            <li>index
-            <li>demo
-            <li>getlist
-            <li>sysman
-
-            <!-- /.blog-post -->
+        </div>
+        <div class="col-sm-12">
+            <table class="table table-hover table-condensed">
 
 
+                <tr>
+                    <td>
+                        序号
+                    </td>
+                    <td>
+                        Url
+                    </td>
+                    <td>
+                        路由
+                    </td>
+                    <td>
+                        控制器
+                    </td>
+                    <td>
+                        视图
+                    </td>
+                    <td>
+                        操作
+                    </td>
+                </tr>
 
-            <hr>
 
-        </div><!-- /.blog-main -->
+
+
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        <a>/cm/sysman</a>
+                    </td>
+                    <td>
+                        路由
+                    </td>
+                    <td>
+                        控制器
+                    </td>
+                    <td>
+                        视图
+                    </td>
+                    <td>
+                        操作
+                    </td>
+                </tr>
+
+
+
+            </table>
+        </div>
 
 
     </div><!-- /.row -->

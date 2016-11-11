@@ -4,31 +4,50 @@
 |--------------------------------------------------------------------------
 | Routes File
 |--------------------------------------------------------------------------
-|
 | Here is where you will register all of the routes in an application.
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
-|
 */
 
-Route::get('/', function () {
+//Route::get('/', function () {
+//    return view('list',[
+//        'doc'=>[
+//
+//        ]
+//    ]);
+//});
 
-    return view('list',[
-        'doc'=>[
-           
-        ]
-    ]);
-});
-
+//隐式路由
+Route::controller('/', 'HomeController');
 
 
 
 Route::group(['namespace' => 'Cm'], function()
 {
 
-    Route::get('/cm', 'CmController@index');
+    Route::get('/cm', function(){return view('cm/index');});                //首页
+    Route::get('/cm/demo', function(){return view('cm/demo');});            //页面示例
+    Route::get('/cm/getlist', function(){return view('cm/getlist');});      //列表
+    Route::get('/cm/sysman', 'CmController@sysman');
+    Route::get('/cm/input/{id}', 'CmController@input');
+
+
+//    Route::get('/cm', 'CmController@index');
+//    Route::get('/cm/demo', 'CmController@demo');
+//    Route::get('/cm/getlist', 'CmController@getlist');
 
 });
+
+
+
+
+
+
+//隐式路由
+Route::controller('user', 'UserController', [
+    'getShow' => 'user.show',
+]);
+
 
 
 
@@ -53,6 +72,49 @@ Route::group(['namespace' => 'Doc'], function()
 });
 
 
+
+/**
+ * 固定页
+ */
+
+
+
+
+
+
+
+Route::get('/list', function () {
+    return view('list',[
+        'doc'=>[
+        ]
+    ]);
+});
+
+Route::get('/errors', function () {
+    return view('errors/503');
+});
+
+Route::get('/404', function () {
+    //404自定义
+    //resources/views/errors/404.blade.php
+    abort(404, 'Unauthorized action.');
+});
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/hello', function () {
+    return view('hello');
+});
+
+Route::get('/docdemo', function () {
+    return view('docdemo');
+});
+
+
+
+
 //Route::get('doc/router', ['as' => 'profile',function ($id) {
 //    //
 //}]);
@@ -69,18 +131,6 @@ Route::group(['namespace' => 'Doc'], function()
 //    });
 //
 //});
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Route::group(['middleware' => ['web']], function () {
 //    //
@@ -120,15 +170,6 @@ Route::group(['namespace' => 'Doc'], function()
 //    ->where('name', '[A-Za-z]+');
 
 
-
-
-
-
-
-
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -143,7 +184,7 @@ Route::group(['namespace' => 'Doc'], function()
 
 
 //Route::group(['middleware' => ['web']], function () {
-//    //
+//
 //});
 
 /**
@@ -154,41 +195,4 @@ Route::group(['namespace' => 'Doc'], function()
 //    return view('doclist');
 //});
 
-
-
-
-
-
-
-
-
-
-Route::get('/list', function () {
-    return view('list',[
-        'doc'=>[
-        ]
-    ]);
-});
-
-Route::get('/errors', function () {
-    return view('errors/503');
-});
-
-Route::get('/404', function () {
-    //404自定义
-    //resources/views/errors/404.blade.php
-    abort(404, 'Unauthorized action.');
-});
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function () {
-    return view('hello');
-});
-
-Route::get('/docdemo', function () {
-    return view('docdemo');
-});
 
